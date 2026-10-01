@@ -1,0 +1,41 @@
+{
+  "domain": "https://www.truescopebc.com",
+  "email": "info@truescopebc.com",
+  "phone_display": "+974 0000 0000",
+  "phone_link": "+97400000000",
+  "whatsapp": "97400000000",
+  "linkedin": "https://www.linkedin.com/company/[company-page]",
+  "address_for_maps": "Laffan Tower, Doha, Qatar",
+  "images": {
+    "hero": "/images/hero.webp",
+    "approach": "/images/approach.webp",
+    "why": "/images/results.webp",
+    "logo": "/images/logo.png"
+  },
+  "clients": [
+    {
+      "name": "[Client name]",
+      "logo": ""
+    },
+    {
+      "name": "[Client name]",
+      "logo": ""
+    },
+    {
+      "name": "[Client name]",
+      "logo": ""
+    },
+    {
+      "name": "[Client name]",
+      "logo": ""
+    },
+    {
+      "name": "[Client name]",
+      "logo": ""
+    },
+    {
+      "name": "[Client name]",
+      "logo": ""
+    }
+  ]
+}

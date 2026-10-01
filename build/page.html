@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" dir="{{ dir }}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>{{ c.seo.title }}</title>
+<meta name="description" content="{{ c.seo.description }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{{ url }}">
+<link rel="alternate" hreflang="en" href="{{ s.domain }}/">
+<link rel="alternate" hreflang="ar" href="{{ s.domain }}/ar/">
+<link rel="alternate" hreflang="x-default" href="{{ s.domain }}/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{ url }}">
+<meta property="og:title" content="{{ c.seo.title }}">
+<meta property="og:description" content="{{ c.seo.share_text }}">
+<meta property="og:site_name" content="True Scope for Business Consulting">
+<meta property="og:locale" content="{{ 'ar_QA' if lang == 'ar' else 'en_QA' }}">
+<meta property="og:image" content="{{ abs(s.images.hero) }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ c.seo.title }}">
+<meta name="twitter:description" content="{{ c.seo.share_text }}">
+<meta name="twitter:image" content="{{ abs(s.images.hero) }}">
+<meta name="theme-color" content="#0f7a52">
+<link rel="icon" type="image/svg+xml" href="{{ favicon }}">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preload" as="image" href="{{ s.images.hero }}" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?{{ fonts }}&display=swap" rel="stylesheet">
+<style>
+{{ css }}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">{{ c.ui.skip }}</a>
+
+{%- macro navlinks() %}
+      <li><a href="#mission">{{ c.nav.mission }}</a></li>
+      <li><a href="#services">{{ c.nav.services }}</a></li>
+      <li><a href="#approach">{{ c.nav.approach }}</a></li>
+      <li><a href="#why">{{ c.nav.why }}</a></li>
+      {%- if c.team.show %}
+      <li><a href="#team">{{ c.nav.team }}</a></li>
+      {%- endif %}
+{%- endmacro %}
+
+<header id="hdr">
+  <div class="wrap nav">
+    <a href="{{ home }}" class="logo" aria-label="{{ c.ui.home_label }}">
+      {{ logo_mark }}
+      <span style="line-height:1.05" dir="ltr"><b>TRUE</b> <span>SCOPE</span><small>{{ c.ui.logo_subtitle }}</small></span>
+    </a>
+    <nav aria-label="Main"><ul>{{ navlinks() }}
+    </ul></nav>
+    <div class="nav-end">
+      <a href="{{ other_href }}" class="lang" lang="{{ other_lang }}" hreflang="{{ other_lang }}">{{ c.ui.switch_language }}</a>
+      <a href="#contact" class="btn">{{ c.nav.cta }} {{ i.arrow }}</a>
+      <button class="burger" id="burger" aria-label="{{ c.ui.open_menu }}" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile" inert>
+  <button class="close" id="closeMenu" aria-label="{{ c.ui.close_menu }}">×</button>
+  <a href="#mission">{{ c.nav.mission }}</a>
+  <a href="#services">{{ c.nav.services }}</a>
+  <a href="#approach">{{ c.nav.approach }}</a>
+  <a href="#why">{{ c.nav.why }}</a>
+  {%- if c.team.show %}
+  <a href="#team">{{ c.nav.team }}</a>
+  {%- endif %}
+  <a href="#contact">{{ c.nav.cta }}</a>
+  <a href="{{ other_href }}" class="lang" lang="{{ other_lang }}">{{ c.ui.switch_language }}</a>
+</nav>
+
+<main id="main">
+
+<section class="hero" id="home">
+  <div class="hero-bg">
+    <img src="{{ s.images.hero }}" alt="{{ c.hero.image_alt }}" width="1600" height="900" fetchpriority="high" decoding="async">
+  </div>
+  <div id="reticle" aria-hidden="true"><span class="c tl"></span><span class="c tr"></span><span class="c bl"></span><span class="c br"></span><span class="dot"></span></div>
+  <div class="wrap">
+    <div class="hero-inner">
+      <span class="eyebrow">{{ c.hero.eyebrow }}</span>
+      <h1>{{ c.hero.title_start }}<em>{{ c.hero.title_highlight }}</em>{{ c.hero.title_end }}</h1>
+      <p>{{ c.hero.text }}</p>
+      <div class="cta-row">
+        <a href="#contact" class="btn">{{ c.nav.cta }} {{ i.arrow }}</a>
+        <a href="#services" class="btn ghost">{{ c.hero.button_secondary }}</a>
+      </div>
+      {%- if c.hero.badges %}
+      <div class="hero-meta">
+        {%- for b in c.hero.badges %}
+        <div><b>{{ b.title }}</b><small>{{ b.text }}</small></div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </div>
+  </div>
+</section>
+
+<section class="mv" id="mission">
+  <div class="wrap">
+    <div class="head rev"><span class="eyebrow" style="color:#5fcf9c">{{ c.purpose.eyebrow }}</span>
+      <h2 style="color:#fff">{{ c.purpose.heading }}</h2></div>
+    <div class="grid">
+      <div class="mv-card frame rev">
+        <div class="k">{{ i.target }} {{ c.purpose.mission_label }}</div>
+        <p class="q serif">{{ highlight(c.purpose.mission_text, c.purpose.mission_highlight) }}</p>
+      </div>
+      <div class="mv-card frame rev">
+        <div class="k">{{ i.eye }} {{ c.purpose.vision_label }}</div>
+        <p class="q serif">{{ highlight(c.purpose.vision_text, c.purpose.vision_highlight) }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%- if c.stats.show and c.stats["items"] %}
+<section class="stats" aria-label="Key figures">
+  <div class="wrap row" style="grid-template-columns:repeat({{ [c.stats['items']|length, 4]|min }},1fr)">
+    {%- for st in c.stats["items"] %}
+    <div class="st"><b dir="ltr">{{ st.number }}</b><small>{{ st.label }}</small></div>
+    {%- endfor %}
+  </div>
+</section>
+{%- endif %}
+
+{%- if c.clients.show and s.clients %}
+<section class="clients" aria-label="{{ c.clients.heading }}">
+  <div class="wrap">
+    <p>{{ c.clients.heading }}</p>
+    <div class="logos">
+      {%- for cl in s.clients %}
+      <div class="lg">{% if cl.logo %}<img src="{{ cl.logo }}" alt="{{ cl.name }}" loading="lazy">{% else %}{{ cl.name or c.ui.client_logo_placeholder }}{% endif %}</div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rev"><span class="eyebrow">{{ c.services.eyebrow }}</span>
+      <h2>{{ c.services.heading }}</h2>
+      <p>{{ c.services.text }}</p>
+    </div>
+    <div class="svc-list">
+      {%- for sv in c.services["items"] %}
+      {%- set wide = loop.last and (loop.length % 3 == 1) %}
+      <div class="svc{{ ' wide' if wide }} rev"{% if wide %} style="padding:32px"{% endif %}><span class="no">{{ '%02d' % loop.index }}</span><div class="ico">{{ svc_icon(loop.index0) }}</div><div><h3>{{ sv.title }}</h3><p>{{ sv.text }}</p></div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach">
+  <div class="wrap appr-grid">
+    <div class="appr-img frame rev">
+      <img src="{{ s.images.approach }}" alt="{{ c.approach.image_alt }}" width="800" height="600" loading="lazy" decoding="async">
+    </div>
+    <div class="rev">
+      <span class="eyebrow">{{ c.approach.eyebrow }}</span>
+      <h2 style="font-size:clamp(28px,4vw,42px)">{{ c.approach.heading }}</h2>
+      <p style="color:var(--gray);margin:16px 0 26px">{{ c.approach.text }}</p>
+      <ol class="steps">
+        {%- for st in c.approach.steps %}
+        <li><h3>{{ st.title }}</h3><p>{{ st.text }}</p></li>
+        {%- endfor %}
+      </ol>
+    </div>
+  </div>
+</section>
+
+{%- if c.case.show %}
+<section class="case" id="case">
+  <div class="wrap">
+    <div class="head rev"><span class="eyebrow">{{ c.case.eyebrow }}</span><h2>{{ c.case.heading }}</h2></div>
+    <article class="case-card rev">
+      <div class="case-body">
+        {%- if c.case.sector %}<span class="tag">{{ c.case.sector }}</span>{% endif %}
+        <h3>{{ c.case.title }}</h3>
+        <p>{{ c.case.text }}</p>
+        {%- if c.case.details %}
+        <dl>
+          {%- for d in c.case.details %}
+          <dt>{{ d.label }}</dt><dd>{{ d.value }}</dd>
+          {%- endfor %}
+        </dl>
+        {%- endif %}
+      </div>
+      {%- if c.case.results %}
+      <div class="case-kpis">
+        {%- for k in c.case.results %}
+        <div><b dir="ltr">{{ k.number }}</b><small>{{ k.label }}</small></div>
+        {%- endfor %}
+      </div>
+      {%- endif %}
+    </article>
+  </div>
+</section>
+{%- endif %}
+
+<section id="why">
+  <div class="wrap why-grid">
+    <div class="why-img frame rev">
+      <img src="{{ s.images.why }}" alt="{{ c.why.image_alt }}" width="600" height="800" loading="lazy" decoding="async">
+    </div>
+    <div>
+      <div class="rev"><span class="eyebrow">{{ c.why.eyebrow }}</span>
+        <h2 style="font-size:clamp(28px,4vw,42px);margin-bottom:28px">{{ c.why.heading }}</h2></div>
+      <ul class="why-items">
+        {%- for w in c.why["items"] %}
+        <li class="rev"><span class="chk">{{ why_icon(loop.index0) }}</span><div><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div></li>
+        {%- endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{%- if c.team.show and c.team.members %}
+<section id="team">
+  <div class="wrap">
+    <div class="head rev"><span class="eyebrow">{{ c.team.eyebrow }}</span><h2>{{ c.team.heading }}</h2><p>{{ c.team.text }}</p></div>
+    <div class="team-grid">
+      {%- for m in c.team.members %}
+      <div class="member rev"><div class="ph">{% if m.photo %}<img src="{{ m.photo }}" alt="{{ m.name }}" loading="lazy">{% else %}{{ i.user }}{% endif %}</div><div class="info"><h3>{{ m.name }}</h3><p class="role">{{ m.role }}</p>
+        {%- set certs = (m.certificates or '').split(',') | map('trim') | select | list %}
+        {%- if certs %}<div class="certs">{% for ct in certs %}<span>{{ ct }}</span>{% endfor %}</div>{% endif %}</div></div>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+{%- endif %}
+
+<section class="cta" id="contact">
+  <div class="wrap cta-grid">
+    <div class="rev">
+      <span class="eyebrow" style="color:#5fcf9c">{{ c.contact.eyebrow }}</span>
+      <h2>{{ c.contact.heading }}</h2>
+      <p class="lead">{{ c.contact.text }}</p>
+      <div class="contact-info">
+        {%- if s.phone_display %}
+        <a href="tel:{{ s.phone_link }}" class="ci-row">
+          <span class="ci-ico">{{ i.phone }}</span>
+          <div><small>{{ c.contact.phone_label }}</small><b dir="ltr">{{ s.phone_display }}</b></div>
+        </a>
+        {%- endif %}
+        <a href="mailto:{{ s.email }}" class="ci-row">
+          <span class="ci-ico">{{ i.mail }}</span>
+          <div><small>{{ c.contact.email_label }}</small><b dir="ltr">{{ s.email }}</b></div>
+        </a>
+        <div class="ci-row">
+          <span class="ci-ico">{{ i.pin }}</span>
+          <div><small>{{ c.contact.office_label }}</small><b>{{ c.contact.office }}</b><span class="loc">{{ c.contact.city }}</span></div>
+        </div>
+      </div>
+      <div class="map-card">
+        <iframe title="{{ c.contact.map_title }}" src="https://maps.google.com/maps?q={{ s.address_for_maps|urlencode }}&z=15&hl={{ lang }}&output=embed" width="600" height="230" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a href="https://www.google.com/maps/search/?api=1&query={{ s.address_for_maps|urlencode }}" target="_blank" rel="noopener" class="map-open">{{ c.contact.open_maps }} {{ i.ext }}</a>
+      </div>
+    </div>
+    {%- set f = c.contact.form %}
+    <form class="rev" id="contactForm" name="contact" method="POST" action="{{ home }}?sent=1#contact" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+      <input type="hidden" name="form-name" value="contact">
+      <input type="hidden" name="page-language" value="{{ lang }}">
+      <p style="display:none" aria-hidden="true"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="f2">
+        <div><label class="sr-only" for="f-name">{{ f.name }}</label><input id="f-name" type="text" name="name" placeholder="{{ f.name }}" autocomplete="name" required></div>
+        <div><label class="sr-only" for="f-org">{{ f.organization }}</label><input id="f-org" type="text" name="organization" placeholder="{{ f.organization }}" autocomplete="organization"></div>
+      </div>
+      <div class="f2">
+        <div><label class="sr-only" for="f-email">{{ f.email }}</label><input id="f-email" type="email" name="email" placeholder="{{ f.email }}" autocomplete="email" dir="ltr" required></div>
+        <div><label class="sr-only" for="f-phone">{{ f.phone }}</label><input id="f-phone" type="tel" name="phone" placeholder="{{ f.phone }}" autocomplete="tel" dir="ltr"></div>
+      </div>
+      <div><label class="sr-only" for="f-interest">{{ f.interest }}</label>
+      <select id="f-interest" name="interest" required>
+        <option value="">{{ f.interest_placeholder }}</option>
+        {%- for o in f.interests %}
+        <option>{{ o }}</option>
+        {%- endfor %}
+      </select></div>
+      <div><label class="sr-only" for="f-msg">{{ f.message }}</label><textarea id="f-msg" name="message" placeholder="{{ f.message_placeholder }}" required></textarea></div>
+      <button type="submit" class="btn">{{ f.send }} {{ i.arrow }}</button>
+      <p class="formnote" id="formNote" role="status" aria-live="polite">{{ f.note }}</p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+{%- if s.whatsapp %}
+<a class="wa" href="{{ wa_link }}" target="_blank" rel="noopener" aria-label="{{ c.contact.whatsapp_label }}">{{ i.wa }}</a>
+{%- endif %}
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <a href="{{ home }}" class="logo" aria-label="{{ c.ui.home_label }}">
+          {{ logo_mark_foot }}
+          <span style="line-height:1.05" dir="ltr"><b>TRUE</b> <span>SCOPE</span><small>{{ c.ui.logo_subtitle }}</small></span>
+        </a>
+        <p>{{ c.footer.about }}</p>
+        <div class="foot-social">
+          {%- if s.linkedin %}<a href="{{ s.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ i["in"] }}</a>{% endif %}
+          {%- if s.whatsapp %}<a href="{{ wa_link }}" target="_blank" rel="noopener" aria-label="WhatsApp">{{ i.wa }}</a>{% endif %}
+        </div>
+      </div>
+      <div class="foot-links">
+        <div>
+          <h4>{{ c.footer.explore }}</h4>
+          <a href="#mission">{{ c.footer.links.mission }}</a>
+          <a href="#services">{{ c.footer.links.services }}</a>
+          <a href="#approach">{{ c.footer.links.approach }}</a>
+          <a href="#why">{{ c.footer.links.why }}</a>
+          {%- if c.team.show %}
+          <a href="#team">{{ c.footer.links.team }}</a>
+          {%- endif %}
+        </div>
+        <div>
+          <h4>{{ c.footer.contact }}</h4>
+          {%- if s.phone_display %}
+          <a href="tel:{{ s.phone_link }}" dir="ltr">{{ s.phone_display }}</a>
+          {%- endif %}
+          <a href="mailto:{{ s.email }}" dir="ltr">{{ s.email }}</a>
+          <a href="#contact">{{ c.contact.office }}، {{ c.contact.city }}</a>
+          <a href="#contact">{{ c.nav.cta }}</a>
+        </div>
+      </div>
+    </div>
+    <div class="copy">
+      <span>{{ c.footer.copyright }}</span>
+      <span>{{ c.footer.tagline }}</span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{{ schema }}
+</script>
+
+<script>
+(function(){
+  var CFG={{ js_cfg }};
+
+  var hdr=document.getElementById('hdr');
+  addEventListener('scroll',function(){hdr.classList.toggle('scrolled',scrollY>40)},{passive:true});
+
+  var mm=document.getElementById('mobileMenu'),burger=document.getElementById('burger');
+  function open(){mm.classList.add('open');mm.inert=false;burger.setAttribute('aria-expanded','true');
+    mm.querySelectorAll('a').forEach(function(a,i){a.style.transitionDelay=(0.08+i*0.07)+'s'});
+    document.getElementById('closeMenu').focus();}
+  function close(){mm.classList.remove('open');mm.inert=true;burger.setAttribute('aria-expanded','false');
+    mm.querySelectorAll('a').forEach(function(a){a.style.transitionDelay='0s'});}
+  burger.onclick=open;
+  document.getElementById('closeMenu').onclick=function(){close();burger.focus();};
+  mm.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  addEventListener('keydown',function(e){if(e.key==='Escape'&&mm.classList.contains('open')){close();burger.focus();}});
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.14});
+    document.querySelectorAll('.rev').forEach(function(el,i){el.style.transitionDelay=(i%4*0.06)+'s';io.observe(el);});
+  } else {
+    document.querySelectorAll('.rev').forEach(function(el){el.classList.add('in');});
+  }
+
+  var ret=document.getElementById('reticle'),hero=document.getElementById('home');
+  if(ret&&matchMedia('(pointer:fine)').matches&&!matchMedia('(prefers-reduced-motion:reduce)').matches){
+    var tx=0,ty=0,cx=0,cy=0,raf=0;
+    function loop(){cx+=(tx-cx)*.12;cy+=(ty-cy)*.12;ret.style.transform='translate('+cx+'px,'+cy+'px) rotate('+((cx-tx)*0.04)+'deg)';
+      raf=(Math.abs(tx-cx)>.3||Math.abs(ty-cy)>.3)?requestAnimationFrame(loop):0;}
+    hero.addEventListener('mousemove',function(e){var r=hero.getBoundingClientRect();tx=e.clientX-r.left-32;ty=e.clientY-r.top-32;ret.style.opacity=.85;if(!raf)raf=requestAnimationFrame(loop);});
+    hero.addEventListener('mouseleave',function(){ret.style.opacity=0;});
+  }
+
+  var f=document.getElementById('contactForm'),note=document.getElementById('formNote');
+  if(/[?&]sent=1/.test(location.search)){note.textContent=CFG.ok;note.style.color='#5fcf9c';}
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!f.checkValidity()){f.reportValidity();return;}
+    note.textContent=CFG.sending;note.style.color='rgba(255,255,255,.7)';
+    fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(f)).toString()})
+      .then(function(r){if(!r.ok)throw 0;})
+      .then(function(){f.reset();note.textContent=CFG.ok;note.style.color='#5fcf9c';})
+      .catch(function(){note.textContent=CFG.err+' '+CFG.email;note.style.color='#ffb4a8';});
+  });
+})();
+</script>
+</body>
+</html>

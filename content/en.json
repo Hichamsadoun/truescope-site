@@ -1,0 +1,274 @@
+{
+  "seo": {
+    "title": "True Scope for Business Consulting | Management & Project Advisory in Doha, Qatar",
+    "description": "True Scope for Business Consulting delivers administrative development and PMI/PMBOK-based project management advisory in Qatar and across the Gulf, driving measurable organizational performance.",
+    "share_text": "Administrative development and project management advisory in Qatar and the Gulf that delivers measurable, sustainable results."
+  },
+  "nav": {
+    "mission": "Mission",
+    "services": "Services",
+    "approach": "Approach",
+    "why": "Why Us",
+    "team": "Team",
+    "cta": "Request a consultation"
+  },
+  "hero": {
+    "eyebrow": "Administrative development & project management",
+    "title_start": "Bringing your organization into ",
+    "title_highlight": "true focus",
+    "title_end": ".",
+    "text": "True Scope for Business Consulting is a specialized advisory firm delivering integrated solutions in administrative development and project management, built on international standards and a deep understanding of the Gulf business environment.",
+    "button_secondary": "Explore our services",
+    "image_alt": "Doha West Bay skyline with modern skyscrapers over the Corniche bay at sunset in Qatar",
+    "badges": [
+      {
+        "title": "PMI / PMBOK",
+        "text": "Standards-based delivery"
+      },
+      {
+        "title": "Public & private",
+        "text": "Sector partnerships"
+      },
+      {
+        "title": "Measurable",
+        "text": "Sustainable results"
+      }
+    ]
+  },
+  "purpose": {
+    "eyebrow": "Purpose",
+    "heading": "Why True Scope exists",
+    "mission_label": "Mission",
+    "mission_text": "To empower organizations with professional consulting services that elevate administrative excellence and ensure successful project delivery through knowledge, expertise, and global best practices.",
+    "mission_highlight": "administrative excellence",
+    "vision_label": "Vision",
+    "vision_text": "To be the trusted consulting partner in the region, recognized for advancing institutional performance and delivering high-quality project management solutions.",
+    "vision_highlight": "trusted consulting partner"
+  },
+  "stats": {
+    "show": false,
+    "items": [
+      {
+        "number": "[00]+",
+        "label": "Years of combined experience"
+      },
+      {
+        "number": "[00]+",
+        "label": "Projects delivered"
+      },
+      {
+        "number": "[00]+",
+        "label": "Clients served"
+      },
+      {
+        "number": "[00]",
+        "label": "PMP-certified consultants"
+      }
+    ]
+  },
+  "clients": {
+    "show": false,
+    "heading": "Trusted by organizations across Qatar"
+  },
+  "services": {
+    "eyebrow": "Core services",
+    "heading": "Integrated advisory, end to end",
+    "text": "We partner with public and private sector clients to design structures, streamline workflows, and manage projects with precision, from planning to quality assurance.",
+    "items": [
+      {
+        "title": "Organizational structure & governance",
+        "text": "Design of organizational structures and governance frameworks that clarify ownership, accountability, and decision rights."
+      },
+      {
+        "title": "Administrative policies & procedures",
+        "text": "Clear, applicable policies and standard operating procedures that streamline workflows across the organization."
+      },
+      {
+        "title": "Project management (PMI & PMBOK)",
+        "text": "Project management grounded in proven international standards and methodologies, tailored to your context."
+      },
+      {
+        "title": "Planning, scheduling & execution",
+        "text": "Project planning, scheduling, and hands-on execution support, from kickoff through monitoring and control."
+      },
+      {
+        "title": "Performance analysis & improvement",
+        "text": "Analysis of operational performance and improvement strategies that raise efficiency and effectiveness."
+      },
+      {
+        "title": "Risk management & quality assurance",
+        "text": "Structured risk control and quality assurance embedded across every stage of delivery."
+      },
+      {
+        "title": "Tailored consulting solutions aligned with your goals",
+        "text": "Practical, applicable engagements shaped around your objectives, not theoretical frameworks, designed to create real, lasting impact."
+      }
+    ]
+  },
+  "approach": {
+    "eyebrow": "Our approach",
+    "heading": "Precision from planning to proof",
+    "text": "Our consulting approach combines international standards, proven methodologies, and the realities of the regional business environment, so solutions are practical and measurable.",
+    "image_alt": "Project management dashboard and Gantt chart on a laptop beside printed reports",
+    "steps": [
+      {
+        "title": "Diagnose & scope",
+        "text": "We assess structures, workflows, and objectives to define a clear, focused engagement."
+      },
+      {
+        "title": "Plan & schedule",
+        "text": "PMI/PMBOK-based planning and scheduling set realistic milestones and ownership."
+      },
+      {
+        "title": "Execute & monitor",
+        "text": "Hands-on execution support with continuous monitoring, risk control, and quality assurance."
+      },
+      {
+        "title": "Measure & sustain",
+        "text": "Performance is measured against targets and embedded to sustain long-term results."
+      }
+    ]
+  },
+  "case": {
+    "show": false,
+    "eyebrow": "Case study",
+    "heading": "Results we can point to",
+    "sector": "[Sector, e.g. Government entity]",
+    "title": "[Case study title, e.g. Restructuring a government directorate for faster decisions]",
+    "text": "[Two or three sentences on the client's challenge and what True Scope did. The client can stay anonymous.]",
+    "details": [
+      {
+        "label": "Challenge",
+        "value": "[Short description]"
+      },
+      {
+        "label": "Solution",
+        "value": "[Short description]"
+      },
+      {
+        "label": "Duration",
+        "value": "[e.g. 6 months]"
+      }
+    ],
+    "results": [
+      {
+        "number": "[00]%",
+        "label": "[Result, e.g. faster approval cycle]"
+      },
+      {
+        "number": "[00]",
+        "label": "[Result, e.g. procedures documented]"
+      }
+    ]
+  },
+  "why": {
+    "eyebrow": "Why True Scope",
+    "heading": "Advisory that earns trust",
+    "image_alt": "Two business professionals shaking hands across a conference table",
+    "items": [
+      {
+        "title": "Deep regional expertise",
+        "text": "Strong understanding of the Gulf business environment and its institutions."
+      },
+      {
+        "title": "Practical, actionable solutions",
+        "text": "Real, applicable solutions, not theoretical frameworks that stay on the shelf."
+      },
+      {
+        "title": "Commitment to measurable results",
+        "text": "Every engagement is anchored to outcomes you can see and measure."
+      },
+      {
+        "title": "A specialized team",
+        "text": "Experts in management, project delivery, and strategic analysis working alongside you."
+      }
+    ]
+  },
+  "team": {
+    "show": false,
+    "eyebrow": "Our team",
+    "heading": "The people behind True Scope",
+    "text": "Certified consultants with hands-on experience across government and private sector projects in Qatar.",
+    "members": [
+      {
+        "name": "[Full name]",
+        "role": "[Managing Partner]",
+        "photo": "",
+        "certificates": "PMP, [cert]"
+      },
+      {
+        "name": "[Full name]",
+        "role": "[Senior Project Management Consultant]",
+        "photo": "",
+        "certificates": "PMP, [cert]"
+      },
+      {
+        "name": "[Full name]",
+        "role": "[Organizational Development Consultant]",
+        "photo": "",
+        "certificates": "[cert]"
+      }
+    ]
+  },
+  "contact": {
+    "eyebrow": "Get in touch",
+    "heading": "Let's bring your next project into focus.",
+    "text": "Tell us about your organization and objectives. Our team will respond with a tailored path toward measurable, sustainable results.",
+    "phone_label": "Phone / WhatsApp",
+    "email_label": "Email",
+    "office_label": "Office",
+    "office": "Laffan Tower, Floor 34",
+    "city": "Doha, Qatar",
+    "map_title": "Map of Laffan Tower, Doha, Qatar",
+    "open_maps": "Open in Maps",
+    "form": {
+      "name": "Full name",
+      "organization": "Organization",
+      "email": "Work email",
+      "phone": "Phone (optional)",
+      "interest": "Area of interest",
+      "interest_placeholder": "Area of interest…",
+      "interests": [
+        "Organizational structure & governance",
+        "Administrative policies & procedures",
+        "Project management (PMI/PMBOK)",
+        "Performance improvement",
+        "Risk & quality assurance",
+        "Other"
+      ],
+      "message": "Your message",
+      "message_placeholder": "Briefly describe your goals or challenge…",
+      "send": "Send request",
+      "note": "We typically respond within two business days.",
+      "sending": "Sending…",
+      "success": "Thank you. Your request has been received and we will be in touch shortly.",
+      "error": "Something went wrong. Please email us directly at"
+    },
+    "whatsapp_label": "Chat with us on WhatsApp",
+    "whatsapp_message": "Hello True Scope, I would like to ask about your consulting services."
+  },
+  "footer": {
+    "about": "A specialized advisory firm delivering integrated administrative development and project management solutions across the Gulf business environment.",
+    "explore": "Explore",
+    "contact": "Contact",
+    "copyright": "© 2026 True Scope for Business Consulting. All rights reserved.",
+    "tagline": "Administrative development & project management advisory.",
+    "links": {
+      "mission": "Mission & Vision",
+      "services": "Core Services",
+      "approach": "Our Approach",
+      "why": "Why True Scope",
+      "team": "Our Team"
+    }
+  },
+  "ui": {
+    "skip": "Skip to content",
+    "logo_subtitle": "FOR BUSINESS CONSULTING",
+    "home_label": "True Scope for Business Consulting home",
+    "open_menu": "Open menu",
+    "close_menu": "Close menu",
+    "switch_language": "العربية",
+    "client_logo_placeholder": "Client logo",
+    "organization_description": "Specialized advisory firm delivering integrated administrative development and project management solutions based on PMI/PMBOK standards in Qatar and across the Gulf."
+  }
+}

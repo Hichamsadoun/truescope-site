@@ -1,0 +1,29 @@
+
+/* ===== RTL / Arabic ===== */
+body{font-family:'IBM Plex Sans Arabic','Inter',system-ui,sans-serif;line-height:1.75}
+h1,h2,h3,h4{letter-spacing:0;line-height:1.3}
+.serif,.mv-card .q{font-family:'IBM Plex Sans Arabic',sans-serif;font-weight:500}
+.eyebrow,.mv-card .k,.ci-row small,.foot-links h4,.clients p{letter-spacing:0;text-transform:none;font-size:13.5px}
+.btn svg{transform:scaleX(-1)}
+.skip{left:auto;right:16px}
+.hero-bg::after{background:linear-gradient(-100deg,rgba(255,255,255,.97) 0%,rgba(255,255,255,.9) 42%,rgba(255,255,255,.55) 66%,rgba(19,32,24,.15) 100%)}
+.hero-meta div{padding-left:0;padding-right:16px}
+.hero-meta div::before{left:auto;right:0}
+.frame::before{left:auto;right:-8px;border-right:2px solid var(--green);border-left:none}
+.frame::after{right:auto;left:-8px;border-left:2px solid var(--green);border-right:none}
+.frame:hover::before{left:auto;right:-12px}
+.frame:hover::after{right:auto;left:-12px}
+.nav ul a::after{left:auto;right:0}
+.svc::before{left:auto;right:0;background:linear-gradient(-90deg,var(--green),var(--green-deep))}
+.svc .no{right:auto;left:26px}
+.svc:hover .ico{transform:rotate(6deg) scale(1.05)}
+.steps::before{left:auto;right:21px}
+.steps li{padding:15px 66px 15px 18px}
+.steps li::before{left:auto;right:0}
+.cta::before{right:auto;left:-10%}
+.map-open{right:auto;left:12px}
+.mobile-menu{transform:translateX(-100%)}
+.mobile-menu.open{transform:none}
+.mobile-menu .close{right:auto;left:24px}
+.wa{right:auto;left:22px}
+.ci-row b[dir=ltr]{text-align:right}
