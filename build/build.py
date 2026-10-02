@@ -101,6 +101,8 @@ def main():
     (DIST / "ar" / "index.html").write_text(render(env, "ar", s, load("ar.json")), encoding="utf-8")
     shutil.copytree(ROOT / "images", DIST / "images")
     shutil.copytree(ROOT / "admin", DIST / "admin")
+    # The dashboard preview reads the current images from here
+    shutil.copy(ROOT / "content" / "settings.json", DIST / "admin" / "settings.json")
     print("Built dist/index.html and dist/ar/index.html")
 
 

@@ -48,7 +48,8 @@ def field(key, val, top=False):
     elif key in IMAGE:
         f.update(widget="image", required=False)
     else:
-        f.update(widget="text" if key in LONG else "string", required=False)
+        # Decap labels optional fields "(optional)"; only fields that may be blank stay optional.
+        f.update(widget="text" if key in LONG else "string", required=bool(val))
     return f
 
 
@@ -81,7 +82,7 @@ config = {
     "display_url": "https://www.truescopebc.com",
     "media_folder": "images/uploads",
     "public_folder": "/images/uploads",
-    "collections": [{"name": "site", "label": "محتوى الموقع", "editor": {"preview": False}, "files": [
+    "collections": [{"name": "site", "label": "محتوى الموقع", "editor": {"preview": True}, "files": [
         lang_file("ar", "الصفحة العربية", "content/ar.json"),
         lang_file("en", "الصفحة الإنجليزية (English)", "content/en.json"),
         settings]}],

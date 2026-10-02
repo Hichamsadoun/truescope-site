@@ -18,7 +18,7 @@
    "name": "site",
    "label": "محتوى الموقع",
    "editor": {
-    "preview": false
+    "preview": true
    },
    "files": [
     {
@@ -35,19 +35,19 @@
          "name": "title",
          "label": "العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "description",
          "label": "الوصف",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "share_text",
          "label": "نص المشاركة على وسائل التواصل",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -61,13 +61,13 @@
          "name": "mission",
          "label": "الرسالة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "services",
          "label": "الخدمات",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "approach",
@@ -85,13 +85,13 @@
          "name": "team",
          "label": "فريق العمل",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "cta",
          "label": "زر طلب الاستشارة",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -105,43 +105,43 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_start",
          "label": "العنوان: بداية الجملة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_highlight",
          "label": "العنوان: الجزء الملوّن بالأخضر",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_end",
          "label": "العنوان: نهاية الجملة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "button_secondary",
          "label": "الزر الثاني",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "badges",
@@ -153,13 +153,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -176,49 +176,49 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_label",
          "label": "كلمة \"الرسالة\"",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_text",
          "label": "نص الرسالة",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_highlight",
          "label": "الجزء الملوّن من نص الرسالة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_label",
          "label": "كلمة \"الرؤية\"",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_text",
          "label": "نص الرؤية",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_highlight",
          "label": "الجزء الملوّن من نص الرؤية",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -244,13 +244,13 @@
            "name": "number",
            "label": "الرقم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.number}}"
@@ -273,7 +273,7 @@
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -287,19 +287,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "items",
@@ -311,13 +311,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -334,25 +334,25 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "steps",
@@ -364,13 +364,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -393,31 +393,31 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "sector",
          "label": "القطاع",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title",
          "label": "العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "details",
@@ -429,13 +429,13 @@
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "value",
            "label": "القيمة",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.label}}"
@@ -450,13 +450,13 @@
            "name": "number",
            "label": "الرقم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.number}}"
@@ -473,19 +473,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "items",
@@ -497,13 +497,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -526,19 +526,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "members",
@@ -550,13 +550,13 @@
            "name": "name",
            "label": "الاسم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "role",
            "label": "المنصب",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "photo",
@@ -568,7 +568,7 @@
            "name": "certificates",
            "label": "الشهادات (افصل بينها بفاصلة)",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.name}}"
@@ -585,61 +585,61 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "phone_label",
          "label": "عنوان الهاتف",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "email_label",
          "label": "عنوان البريد",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "office_label",
          "label": "عنوان المكتب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "office",
          "label": "المكتب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "city",
          "label": "المدينة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "map_title",
          "label": "وصف الخريطة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "open_maps",
          "label": "زر فتح الخرائط",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "form",
@@ -650,37 +650,37 @@
            "name": "name",
            "label": "الاسم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "organization",
            "label": "خانة الجهة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "email",
            "label": "خانة البريد",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "phone",
            "label": "خانة الهاتف",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interest",
            "label": "خانة مجال الاهتمام",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interest_placeholder",
            "label": "النص الافتراضي لمجال الاهتمام",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interests",
@@ -691,43 +691,43 @@
            "name": "message",
            "label": "خانة الرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "message_placeholder",
            "label": "النص الافتراضي للرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "send",
            "label": "زر الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "note",
            "label": "ملاحظة تحت الزر",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "sending",
            "label": "رسالة جارٍ الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "success",
            "label": "رسالة نجاح الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "error",
            "label": "رسالة الخطأ",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "collapsed": true
@@ -736,13 +736,13 @@
          "name": "whatsapp_label",
          "label": "وصف زر واتساب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "whatsapp_message",
          "label": "الرسالة الجاهزة في واتساب",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -756,31 +756,31 @@
          "name": "about",
          "label": "نبذة",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "explore",
          "label": "عنوان روابط التصفح",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "contact",
          "label": "تواصل معنا",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "copyright",
          "label": "حقوق النشر",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "tagline",
          "label": "السطر الأخير",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "links",
@@ -791,13 +791,13 @@
            "name": "mission",
            "label": "الرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "services",
            "label": "الخدمات",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "approach",
@@ -815,7 +815,7 @@
            "name": "team",
            "label": "فريق العمل",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "collapsed": true
@@ -832,49 +832,49 @@
          "name": "skip",
          "label": "رابط تخطي للمحتوى",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "logo_subtitle",
          "label": "النص تحت الشعار",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "home_label",
          "label": "وصف رابط الشعار",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "open_menu",
          "label": "زر فتح القائمة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "close_menu",
          "label": "زر إغلاق القائمة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "switch_language",
          "label": "زر تبديل اللغة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "client_logo_placeholder",
          "label": "نص مكان شعار العميل",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "organization_description",
          "label": "وصف الشركة لمحركات البحث",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -895,19 +895,19 @@
          "name": "title",
          "label": "العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "description",
          "label": "الوصف",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "share_text",
          "label": "نص المشاركة على وسائل التواصل",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -921,13 +921,13 @@
          "name": "mission",
          "label": "الرسالة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "services",
          "label": "الخدمات",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "approach",
@@ -945,13 +945,13 @@
          "name": "team",
          "label": "فريق العمل",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "cta",
          "label": "زر طلب الاستشارة",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -965,43 +965,43 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_start",
          "label": "العنوان: بداية الجملة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_highlight",
          "label": "العنوان: الجزء الملوّن بالأخضر",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title_end",
          "label": "العنوان: نهاية الجملة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "button_secondary",
          "label": "الزر الثاني",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "badges",
@@ -1013,13 +1013,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -1036,49 +1036,49 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_label",
          "label": "كلمة \"الرسالة\"",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_text",
          "label": "نص الرسالة",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "mission_highlight",
          "label": "الجزء الملوّن من نص الرسالة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_label",
          "label": "كلمة \"الرؤية\"",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_text",
          "label": "نص الرؤية",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "vision_highlight",
          "label": "الجزء الملوّن من نص الرؤية",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -1104,13 +1104,13 @@
            "name": "number",
            "label": "الرقم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.number}}"
@@ -1133,7 +1133,7 @@
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -1147,19 +1147,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "items",
@@ -1171,13 +1171,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -1194,25 +1194,25 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "steps",
@@ -1224,13 +1224,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -1253,31 +1253,31 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "sector",
          "label": "القطاع",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "title",
          "label": "العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "details",
@@ -1289,13 +1289,13 @@
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "value",
            "label": "القيمة",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.label}}"
@@ -1310,13 +1310,13 @@
            "name": "number",
            "label": "الرقم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "label",
            "label": "الوصف",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.number}}"
@@ -1333,19 +1333,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "image_alt",
          "label": "وصف الصورة (لمحركات البحث)",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "items",
@@ -1357,13 +1357,13 @@
            "name": "title",
            "label": "العنوان",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "text",
            "label": "النص",
            "widget": "text",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.title}}"
@@ -1386,19 +1386,19 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "members",
@@ -1410,13 +1410,13 @@
            "name": "name",
            "label": "الاسم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "role",
            "label": "المنصب",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "photo",
@@ -1428,7 +1428,7 @@
            "name": "certificates",
            "label": "الشهادات (افصل بينها بفاصلة)",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "summary": "{{fields.name}}"
@@ -1445,61 +1445,61 @@
          "name": "eyebrow",
          "label": "السطر الصغير فوق العنوان",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "heading",
          "label": "عنوان القسم",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "text",
          "label": "النص",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "phone_label",
          "label": "عنوان الهاتف",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "email_label",
          "label": "عنوان البريد",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "office_label",
          "label": "عنوان المكتب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "office",
          "label": "المكتب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "city",
          "label": "المدينة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "map_title",
          "label": "وصف الخريطة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "open_maps",
          "label": "زر فتح الخرائط",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "form",
@@ -1510,37 +1510,37 @@
            "name": "name",
            "label": "الاسم",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "organization",
            "label": "خانة الجهة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "email",
            "label": "خانة البريد",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "phone",
            "label": "خانة الهاتف",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interest",
            "label": "خانة مجال الاهتمام",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interest_placeholder",
            "label": "النص الافتراضي لمجال الاهتمام",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "interests",
@@ -1551,43 +1551,43 @@
            "name": "message",
            "label": "خانة الرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "message_placeholder",
            "label": "النص الافتراضي للرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "send",
            "label": "زر الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "note",
            "label": "ملاحظة تحت الزر",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "sending",
            "label": "رسالة جارٍ الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "success",
            "label": "رسالة نجاح الإرسال",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "error",
            "label": "رسالة الخطأ",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "collapsed": true
@@ -1596,13 +1596,13 @@
          "name": "whatsapp_label",
          "label": "وصف زر واتساب",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "whatsapp_message",
          "label": "الرسالة الجاهزة في واتساب",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true
@@ -1616,31 +1616,31 @@
          "name": "about",
          "label": "نبذة",
          "widget": "text",
-         "required": false
+         "required": true
         },
         {
          "name": "explore",
          "label": "عنوان روابط التصفح",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "contact",
          "label": "تواصل معنا",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "copyright",
          "label": "حقوق النشر",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "tagline",
          "label": "السطر الأخير",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "links",
@@ -1651,13 +1651,13 @@
            "name": "mission",
            "label": "الرسالة",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "services",
            "label": "الخدمات",
            "widget": "string",
-           "required": false
+           "required": true
           },
           {
            "name": "approach",
@@ -1675,7 +1675,7 @@
            "name": "team",
            "label": "فريق العمل",
            "widget": "string",
-           "required": false
+           "required": true
           }
          ],
          "collapsed": true
@@ -1692,49 +1692,49 @@
          "name": "skip",
          "label": "رابط تخطي للمحتوى",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "logo_subtitle",
          "label": "النص تحت الشعار",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "home_label",
          "label": "وصف رابط الشعار",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "open_menu",
          "label": "زر فتح القائمة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "close_menu",
          "label": "زر إغلاق القائمة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "switch_language",
          "label": "زر تبديل اللغة",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "client_logo_placeholder",
          "label": "نص مكان شعار العميل",
          "widget": "string",
-         "required": false
+         "required": true
         },
         {
          "name": "organization_description",
          "label": "وصف الشركة لمحركات البحث",
          "widget": "text",
-         "required": false
+         "required": true
         }
        ],
        "collapsed": true

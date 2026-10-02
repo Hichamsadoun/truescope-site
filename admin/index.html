@@ -5,9 +5,104 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
   <title>لوحة تحكم ترو سكوب</title>
-  <style>[dir] .CMS_Widget_text input,[dir] textarea{unicode-bidi:plaintext}</style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* Arabic-friendly typography; each text box's direction follows what is typed (dir="auto" below) */
+    body, input, textarea, button, label { font-family: 'IBM Plex Sans Arabic', system-ui, sans-serif !important; }
+    input[dir="auto"], textarea[dir="auto"] { text-align: start; }
+  </style>
 </head>
 <body>
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+  (function () {
+    new MutationObserver(function () {
+      document.querySelectorAll('input[type="text"]:not([dir]), input:not([type]):not([dir]), textarea:not([dir])')
+        .forEach(function (el) { el.setAttribute('dir', 'auto'); });
+    }).observe(document.documentElement, { childList: true, subtree: true });
+
+    var settings = { images: { hero: '/images/hero.webp' } };
+    fetch('/admin/settings.json').then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (s) { if (s) settings = s; }).catch(function () {});
+
+    CMS.registerPreviewStyle([
+      'body{margin:0;font-family:"IBM Plex Sans Arabic",system-ui,sans-serif;background:#f3f5f4;color:#15211b}',
+      '.pv{max-width:640px;margin:16px auto;background:#fff;border:1px solid #dde4e0;border-radius:12px;overflow:hidden;font-size:13px}',
+      '.pv-h{position:relative;padding:34px 22px;background-size:cover;background-position:center;min-height:220px;display:flex;align-items:center}',
+      '.pv-h::before{content:"";position:absolute;inset:0}',
+      '.rtl .pv-h::before{background:linear-gradient(-100deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.2) 100%)}',
+      '.ltr .pv-h::before{background:linear-gradient(100deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.85) 50%,rgba(255,255,255,.2) 100%)}',
+      '.pv-h>div{position:relative;max-width:78%}',
+      '.pv-e{color:#0f7a52;font-weight:700;font-size:11px}',
+      '.pv-t{font-size:24px;font-weight:700;margin:6px 0 8px;line-height:1.3}',
+      '.pv-t em{font-style:normal;color:#0f7a52}',
+      '.pv-d{margin:0;color:#59636b;line-height:1.7}',
+      '.pv-r{padding:11px 22px;border-top:1px solid #e2e7e4;display:flex;justify-content:space-between;gap:12px}',
+      '.pv-r.off{color:#a0aaa5}.pv-r.off b{text-decoration:line-through;font-weight:500}',
+      '.pv-r small{color:#59636b}',
+      '.pv-st{display:flex;gap:18px;flex-wrap:wrap;padding:12px 22px;background:#132018;color:#fff}',
+      '.pv-st div b{display:block;font-size:20px;color:#5fcf9c}',
+      '.pv-c{padding:18px 22px;line-height:1.9}',
+      '.pv-c img{width:100%;border-radius:8px;margin-top:8px}',
+      '.note{max-width:640px;margin:16px auto 0;color:#59636b;font-size:12px;text-align:center}'
+    ].join(''), { raw: true });
+
+    function val(entry, path) { var v = entry.getIn(['data'].concat(path)); return v && v.toJS ? v.toJS() : v; }
+
+    function PagePreview(lang) {
+      var A = lang === 'ar';
+      var SECTIONS = A
+        ? [['purpose', 'الرسالة والرؤية'], ['stats', 'شريط الأرقام'], ['clients', 'شركاؤنا وعملاؤنا'], ['services', 'الخدمات'],
+           ['approach', 'المنهجية'], ['case', 'أهم مشاريعنا'], ['why', 'لماذا نحن'], ['team', 'فريق العمل'], ['contact', 'تواصل معنا']]
+        : [['purpose', 'Mission & vision'], ['stats', 'Key figures'], ['clients', 'Clients'], ['services', 'Services'],
+           ['approach', 'Approach'], ['case', 'Case study'], ['why', 'Why us'], ['team', 'Team'], ['contact', 'Contact']];
+      return createClass({
+        render: function () {
+          var e = this.props.entry, hero = val(e, ['hero']) || {};
+          var img = this.props.getAsset((settings.images && settings.images.hero) || '/images/hero.webp');
+          var rows = SECTIONS.map(function (s) {
+            var sec = val(e, [s[0]]) || {};
+            var on = sec.show === undefined ? true : !!sec.show;
+            return h('div', { key: s[0], className: 'pv-r' + (on ? '' : ' off') },
+              h('b', null, s[1]), h('small', null, on ? (A ? 'ظاهر ✓' : 'Visible ✓') : (A ? 'مخفي' : 'Hidden')));
+          });
+          var stats = val(e, ['stats']) || {};
+          var statsRow = stats.show && stats.items ? h('div', { className: 'pv-st' }, stats.items.map(function (s, i) {
+            return h('div', { key: i }, h('b', { dir: 'ltr' }, s.number), s.label);
+          })) : null;
+          return h('div', { className: A ? 'rtl' : 'ltr', dir: A ? 'rtl' : 'ltr' },
+            h('p', { className: 'note' }, A ? 'معاينة مبسّطة. الموقع يتحدّث بعد الضغط على Publish بدقيقة تقريبًا.' : 'Simplified preview. The site updates about a minute after Publish.'),
+            h('div', { className: 'pv' },
+              h('div', { className: 'pv-h', style: { backgroundImage: 'url(' + img + ')' } },
+                h('div', null,
+                  h('div', { className: 'pv-e' }, hero.eyebrow),
+                  h('div', { className: 'pv-t' }, hero.title_start, h('em', null, hero.title_highlight), hero.title_end),
+                  h('p', { className: 'pv-d' }, hero.text))),
+              statsRow,
+              rows));
+        }
+      });
+    }
+
+    var SettingsPreview = createClass({
+      render: function () {
+        var e = this.props.entry, get = this.props.getAsset;
+        var im = val(e, ['images']) || {};
+        return h('div', { dir: 'rtl' },
+          h('div', { className: 'pv' }, h('div', { className: 'pv-c' },
+            h('div', null, h('b', null, 'الهاتف: '), h('span', { dir: 'ltr' }, val(e, ['phone_display']))),
+            h('div', null, h('b', null, 'واتساب: '), h('span', { dir: 'ltr' }, val(e, ['whatsapp']))),
+            h('div', null, h('b', null, 'البريد: '), h('span', { dir: 'ltr' }, val(e, ['email']))),
+            im.hero ? h('img', { src: get(im.hero), alt: 'صورة الخلفية' }) : null)));
+      }
+    });
+
+    CMS.registerPreviewTemplate('ar', PagePreview('ar'));
+    CMS.registerPreviewTemplate('en', PagePreview('en'));
+    CMS.registerPreviewTemplate('settings', SettingsPreview);
+  })();
+  </script>
 </body>
 </html>
